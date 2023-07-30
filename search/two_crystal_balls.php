@@ -17,10 +17,8 @@ function find_break_point(array $breaks): int|false {
         sqrt(count($breaks))
     );
     $index = $jumpFactor;
-    echo "JUMP FACTOR " . $jumpFactor . PHP_EOL;
     // search for a position which breaks the ball we gonna still have one left
     for(; $index < count($breaks); $index += $jumpFactor){
-        echo "first loop indexes: " .  $index .  PHP_EOL;
         if($breaks[$index]) {
             break;
         }
@@ -29,12 +27,10 @@ function find_break_point(array $breaks): int|false {
     // once we find out the sqrt piece of the array that breaks.. 
     // we will walk this piece in a linear way; 
 
-    // step one factor back to loop this specific part.
-    echo $index . PHP_EOL;
+    // step one factor back to loop this specific part.s
     $index -= $jumpFactor;
 
     for($j = 0; $j <= $jumpFactor && $index < count($breaks); $j++, $index++) {
-        echo "second loop indexes: " .  $index .  PHP_EOL;
         if($breaks[$index]) {
             return $index;
         }
