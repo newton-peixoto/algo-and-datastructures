@@ -52,35 +52,3 @@ class Stack {
     }
 
 }
-
-
-
-$stack = new Stack();
-
-echo "Push 10" . PHP_EOL; 
-$stack->push(10);
-echo "Push 5" . PHP_EOL; 
-$stack->push(5);
-echo "Push 20" . PHP_EOL; 
-$stack->push(20);
-echo "Push 110" . PHP_EOL; 
-$stack->push(110);
-
-#echo $stack->length;
-
-echo "pop of stack " . $stack->pop() . PHP_EOL;
-echo "pop of stack " . $stack->pop() . PHP_EOL;
-echo "remaning items on stack " . $stack->length . PHP_EOL;
-echo "pop of stack " . $stack->pop() . PHP_EOL;
-echo "pop of stack " . $stack->pop() . PHP_EOL;
-
-echo "push 80" . PHP_EOL; 
-$stack->push(80);
-echo "Push 90" . PHP_EOL; 
-$stack->push(90);
-echo "remaning items on stack " . $stack->length . PHP_EOL;
-
-echo "current peek " . $stack->peek() . PHP_EOL;
-echo "pop of stack " . $stack->pop() . PHP_EOL;
-echo "pop of stack " . $stack->pop() . PHP_EOL;
-echo "remaning items on stack " . $stack->length . PHP_EOL;

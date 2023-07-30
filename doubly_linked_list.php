@@ -157,35 +157,3 @@ class DoublyLinkedList {
         return $current;
     }
 }
-
-
-$list = new DoublyLinkedList();
-
-$list->append(1);
-$list->append(2);
-$list->append(3);
-$list->append(4);
-$list->append(5);
-$list->prepend(0);
-$list->remove(5);
-$list->insertAt(5,5);
-$list->removeAt(4);
-
-echo "TAIL -> HEAD : " . PHP_EOL;
-$tailToHead = "";
-$tail = $list->tail;
-while($tail) {
-    $tailToHead .= $tail->value . " -> "; 
-    $tail = $tail->prev;   
-}
-
-echo $tailToHead . PHP_EOL;
-
-echo "HEAD -> TAIL : " . PHP_EOL;
-$headToTail = "";
-$head = $list->head;
-while($head) {
-    $headToTail .= $head->value . " -> "; 
-    $head = $head->next;   
-}
-echo $headToTail . PHP_EOL;
